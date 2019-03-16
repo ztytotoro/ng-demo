@@ -37,3 +37,9 @@ export class StoreSubject<T> extends Subject<T> {
         return this.history.filter(x => x.action === ActionType.Next).map(x => x.value);
     }
 }
+
+class Store {
+    constructor({
+        states = {}
+    }) {}
+}
