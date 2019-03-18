@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { API_URL, DEFAULT_LOCALE } from 'src/configs';
+import { API_URL, DEFAULT_LOCALE } from 'src/services/configuration/rules';
 
 @Injectable({
   providedIn: 'root'

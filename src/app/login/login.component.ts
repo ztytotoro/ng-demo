@@ -1,5 +1,5 @@
-import { ConfigService } from './../../services/config.service';
-import { LocaleType, LocaleInfo } from './../../assets/i18n/index';
+import { ConfigService } from '../../services/configuration/config.service';
+import { LocaleType, LocaleInfo } from '../../services/i18n/rules/index';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -7,7 +7,7 @@ import {
   Validators,
   FormControl
 } from '@angular/forms';
-import { I18nService } from 'src/services/i18n.service';
+import { I18nService } from 'src/services/i18n/i18n.service';
 
 @Component({
   selector: 'app-login',

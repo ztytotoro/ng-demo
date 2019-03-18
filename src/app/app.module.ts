@@ -1,6 +1,6 @@
-import { CookiesService } from './../services/cookies.service';
-import { ConfigService } from './../services/config.service';
-import { I18nService } from './../services/i18n.service';
+import { CookiesService } from '../services/cookies/cookies.service';
+import { ConfigService } from '../services/configuration/config.service';
+import { I18nService } from '../services/i18n/i18n.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

@@ -1,12 +1,12 @@
-import { ConfigService } from './config.service';
+import { ConfigService } from '../configuration/config.service';
 import { Injectable } from '@angular/core';
 import { NzI18nService } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import zh from '@angular/common/locales/zh';
 import { en_US as ng_en, zh_CN as ng_zh } from 'ng-zorro-antd';
-import { en_US, zh_CN, LocaleType } from '../assets/i18n';
-import { CookiesService } from './cookies.service';
+import { en_US, zh_CN, LocaleType } from './rules';
+import { CookiesService } from '../cookies/cookies.service';
 
 @Injectable({
   providedIn: 'root'
