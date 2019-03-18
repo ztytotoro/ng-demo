@@ -14,13 +14,15 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { LoginComponent } from './login/login.component';
 import { AuthInterceptor } from 'src/services/auth/auth.interceptor';
+import { HomeComponent } from './home/home.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
