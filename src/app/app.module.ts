@@ -15,6 +15,7 @@ import en from '@angular/common/locales/en';
 import { LoginComponent } from './login/login.component';
 import { AuthInterceptor } from 'src/services/auth/auth.interceptor';
 import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './layout/layout.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

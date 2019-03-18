@@ -1,0 +1,20 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(239, 240, 241);
+}
+
+.header {
+    height: 50px;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    height: 70px;
+}

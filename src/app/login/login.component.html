@@ -1,33 +1,38 @@
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-  <nz-form-item>
-    <nz-form-control>
-      <nz-input-group [nzPrefix]="prefixUser">
-        <input type="text" nz-input formControlName="userName" [placeholder]="localeText.LoginForm.Username">
-      </nz-input-group>
-      <nz-form-explain *ngIf="validateForm.get('userName')?.dirty && validateForm.get('userName')?.errors">Please input your username!</nz-form-explain>
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control>
-      <nz-input-group [nzPrefix]="prefixLock">
-        <input type="password" nz-input formControlName="password" [placeholder]="localeText.LoginForm.Password">
-      </nz-input-group>
-      <nz-form-explain *ngIf="validateForm.get('password')?.dirty && validateForm.get('password')?.errors">Please input your Password!</nz-form-explain>
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control>
-      <label nz-checkbox formControlName="remember">
-        <span>{{localeText.LoginForm.RememberMe}}</span>
-      </label>
-      <a class="login-form-forgot" class="login-form-forgot">{{localeText.LoginForm.ForgotPassword}}</a>
-      <button nz-button class="login-form-button" [nzType]="'primary'" (click)="Login()">{{localeText.LoginForm.LoginButton}}</button>
-      <a href="">{{localeText.LoginForm.Register}}</a>
-    </nz-form-control>
-  </nz-form-item>
-</form>
-<nz-select style="width: 120px;" [formControl]="locale" nzAllowClear nzPlaceHolder="Choose">
-  <nz-option *ngFor="let item of localeInfo" [nzValue]="item.value" [nzLabel]="item.name"></nz-option>
-</nz-select>
-<ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
-<ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>
+<div class="login-card">
+  <div class="avatar"></div>
+  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group [nzPrefix]="prefixUser">
+          <input type="text" nz-input formControlName="userName" [placeholder]="localeText.LoginForm.Username">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateForm.get('userName')?.dirty && validateForm.get('userName')?.errors">Please
+          input your username!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group [nzPrefix]="prefixLock">
+          <input type="password" nz-input formControlName="password" [placeholder]="localeText.LoginForm.Password">
+        </nz-input-group>
+        <nz-form-explain *ngIf="validateForm.get('password')?.dirty && validateForm.get('password')?.errors">Please
+          input your Password!</nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <label nz-checkbox formControlName="remember">
+          <span>{{localeText.LoginForm.RememberMe}}</span>
+        </label>
+        <a class="login-form-forgot" class="login-form-forgot">{{localeText.LoginForm.ForgotPassword}}</a>
+        <button nz-button class="login-form-button" [nzType]="'primary'" (click)="Login()">{{localeText.LoginForm.LoginButton}}</button>
+        <a href="">{{localeText.LoginForm.Register}}</a>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <nz-select style="width: 120px;" [formControl]="locale" nzAllowClear nzPlaceHolder="Choose">
+    <nz-option *ngFor="let item of localeInfo" [nzValue]="item.value" [nzLabel]="item.name"></nz-option>
+  </nz-select>
+  <ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+  <ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>
+</div>
