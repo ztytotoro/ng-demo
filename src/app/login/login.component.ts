@@ -1,5 +1,5 @@
-import { ConfigService } from '../../services/configuration/config.service';
-import { LocaleType, LocaleInfo } from '../../services/i18n/rules/index';
+import { AuthService } from 'src/services/auth/auth.service';
+import { LocaleType, LocaleInfo } from 'src/services/i18n/rules/index';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  constructor(private fb: FormBuilder, private i18nService: I18nService, private config: ConfigService) {
+  constructor(private fb: FormBuilder, private i18nService: I18nService, private authService: AuthService) {
     this.locale.setValue(i18nService.localeType);
   }
 
@@ -46,5 +46,9 @@ export class LoginComponent implements OnInit {
 
   SwitchLanguage(locale: LocaleType) {
     this.i18nService.SetLocale(locale);
+  }
+
+  Login() {
+    this.authService.Login(this.validateForm.value.userName, this.validateForm.value.password);
   }
 }

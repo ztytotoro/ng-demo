@@ -21,7 +21,7 @@
         <span>{{localeText.LoginForm.RememberMe}}</span>
       </label>
       <a class="login-form-forgot" class="login-form-forgot">{{localeText.LoginForm.ForgotPassword}}</a>
-      <button nz-button class="login-form-button" [nzType]="'primary'">{{localeText.LoginForm.LoginButton}}</button>
+      <button nz-button class="login-form-button" [nzType]="'primary'" (click)="Login()">{{localeText.LoginForm.LoginButton}}</button>
       <a href="">{{localeText.LoginForm.Register}}</a>
     </nz-form-control>
   </nz-form-item>
